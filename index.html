@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/styles/st.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="interface">
+            <form action="#" name="calcForm">
+                <div class="top">
+                    <div class="title">CALCULATOR</div>
+                    <input id="screen" type="text
+                    " name="screen">
+                </div>
+                <div class="bottom">
+                    <input type="button" value="C" onclick="calcForm.screen.value = ''">
+                    <input type="button" value="(" onclick="calcForm.screen.value += '('">
+                    <input type="button" value=")" onclick="calcForm.screen.value += ')'">
+                    <input type="button" value="&larr;" onclick="calcForm.screen.value = calcForm.screen.value.slice(0,-1)">
+
+                    <input type="button" value="7" onclick="calcForm.screen.value += '7'">
+                    <input type="button" value="8" onclick="calcForm.screen.value += '8'">
+                    <input type="button" value="9" onclick="calcForm.screen.value += '9'">
+                    <input type="button" value="+" onclick="calcForm.screen.value += '+'">
+                    
+                    <input type="button" value="4" onclick="calcForm.screen.value += '4'">
+                    <input type="button" value="5" onclick="calcForm.screen.value += '5'">
+                    <input type="button" value="6" onclick="calcForm.screen.value += '6'">
+                    <input type="button" value="-" onclick="calcForm.screen.value += '-'">
+                    
+                    <input type="button" value="1" onclick="calcForm.screen.value += '1'">
+                    <input type="button" value="2" onclick="calcForm.screen.value += '2'">
+                    <input type="button" value="3" onclick="calcForm.screen.value += '3'">
+                    <input type="button" value="*" onclick="calcForm.screen.value += '*'">
+
+                    <input type="button" value="0" onclick="calcForm.screen.value += '0'">
+                    <input type="button" value="." onclick="calcForm.screen.value += '.'">
+                    <!-- <input type="button" value="=" onclick="calcForm.screen.value = eval(calcForm.screen.value)"> -->
+                    <input type="button" value="=" onclick="calculate()">
+                    <input type="button" value="/" onclick="calcForm.screen.value += '/'">
+                </div>
+            </form>
+
+        </div>
+        <div class="history_screen">
+            <button onclick="showHistory()">History</button>
+            <div id="historyDisplay"></div>
+        </div>
+    </div>
+
+    <script src="./assests/js/script.js"></script>
+    <!-- <script>
+        test(); // Call the test function
+    </script> -->
+</body>
+
+</html>
